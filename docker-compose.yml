@@ -1,0 +1,11 @@
+version: '3'
+
+volumes:
+  vol_node_modules:
+services:
+  app:
+    container_name: buildspace-buildweb3appsol
+    build: .
+    volumes:
+      - .:/app
+      - vol_node_modules:/app/node_modules
